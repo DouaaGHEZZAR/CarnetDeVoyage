@@ -22,6 +22,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".CreerVoyageActivity" />
+        <activity android:name=".ListeVoyagesActivity" />
 
     </application>
 
