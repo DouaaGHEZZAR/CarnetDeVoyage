@@ -10,7 +10,6 @@ public class Voyage {
     private int periode;
 
     public Voyage() {
-        // Constructeur vide
     }
 
 
