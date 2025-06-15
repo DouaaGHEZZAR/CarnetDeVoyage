@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="horizontal"
     android:padding="12dp"
     android:layout_width="match_parent"
@@ -29,4 +30,15 @@
         android:textSize="16sp"
         android:textColor="#000000" />
 
+    <!-- Bouton de suppression -->
+    <ImageView
+        android:id="@+id/btn_delete"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@android:drawable/ic_menu_delete"
+        android:contentDescription="Supprimer"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_marginStart="12dp"
+        app:tint="#B00020" />
 </LinearLayout>

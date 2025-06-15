@@ -1,0 +1,8 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_accueil"
+        android:title="Accueil" />
+    <item
+        android:id="@+id/action_voir_voyages"
+        android:title="Mes Voyages" />
+</menu>

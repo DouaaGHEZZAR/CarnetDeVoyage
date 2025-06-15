@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "165437975840",
+    "project_id": "ghezzarmiage2025",
+    "storage_bucket": "ghezzarmiage2025.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:165437975840:android:9312622d04e2c1df9cfb45",
+        "android_client_info": {
+          "package_name": "fr.upjv.MIAGE2025"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAXVlvoxskNSP3vFX1BBuQga0GT2t3dG-k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:165437975840:android:f0adcc0070ab0f6b9cfb45",
+        "android_client_info": {
+          "package_name": "fr.upjv.miage2025.carnetdevoyage"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAXVlvoxskNSP3vFX1BBuQga0GT2t3dG-k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

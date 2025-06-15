@@ -11,10 +11,14 @@
         android:id="@+id/btn_nouveau_voyage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Nouveau voyage"
+        android:text="Map My Trip"
+        android:textSize="18sp"
+        android:padding="16dp"
+        android:backgroundTint="#FF6B5A"
+        android:textColor="#FFFFFF"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
