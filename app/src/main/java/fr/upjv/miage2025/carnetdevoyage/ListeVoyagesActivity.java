@@ -54,26 +54,22 @@ public class ListeVoyagesActivity extends AppCompatActivity {
                     .setTitle("Confirmer la suppression")
                     .setMessage("Voulez-vous vraiment supprimer ce voyage ?")
                     .setPositiveButton("Oui", (dialog, which) -> {
-                        // 1. Supprimer de SQLite
                         VoyageDatabaseHelper db = new VoyageDatabaseHelper(this);
                         db.deleteVoyage(voyage.getId());
                         // Recharger et rafraîchir l'affichage
                         voyages = dbHelper.getAllVoyages();
                         adapter.setVoyages(voyages);
 
-                        // 2. Supprimer de Firestore
                         FirebaseFirestore.getInstance()
                                 .collection("voyages")
                                 .document(String.valueOf(voyage.getId()))
                                 .delete();
 
-                        // 3. Supprimer les points GPS de Realtime Database
                         FirebaseDatabase.getInstance()
                                 .getReference("points_gps")
                                 .child(String.valueOf(voyage.getId()))
                                 .removeValue();
 
-                        // 4. Retirer de la liste et mettre à jour l’adaptateur
                         voyages.remove(voyage);
                         adapter.filter(""); // recharge la liste complète
                         Toast.makeText(this, "Voyage supprimé", Toast.LENGTH_SHORT).show();
@@ -85,7 +81,6 @@ public class ListeVoyagesActivity extends AppCompatActivity {
         });
 
 
-        // Titre dynamique
         TextView titre = findViewById(R.id.header_title);
         titre.setText("Vos voyages");
         HeaderUtils.setupHeaderMenu(this);

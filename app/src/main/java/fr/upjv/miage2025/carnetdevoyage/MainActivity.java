@@ -54,7 +54,6 @@ public class MainActivity extends AppCompatActivity {
                     return;
                 }
 
-                // Vérification date actuelle entre date de départ et retour
                 try {
                     SimpleDateFormat sdf = new SimpleDateFormat("d/M/yyyy", Locale.getDefault());
                     Date now = new Date();
