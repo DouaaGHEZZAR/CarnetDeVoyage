@@ -58,7 +58,7 @@ public class CreerVoyageActivity extends AppCompatActivity {
                 List<Voyage> voyages = dbHelper.getAllVoyages();
                 Voyage dernierVoyage = voyages.get(voyages.size() - 1); // dernier ajouté
 
-                // Envoi Firestore
+                // Envoi Firestore //Walid
                 FirebaseFirestore firestore = FirebaseFirestore.getInstance();
                 firestore.collection("voyages")
                         .document(String.valueOf(dernierVoyage.getId()))

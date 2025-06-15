@@ -79,7 +79,7 @@ public class DetailVoyageActivity extends AppCompatActivity {
         datePickerDialog.show();
     }
 
-    private void exporterPoints(String format) {
+    private void exporterPoints(String format) {//Walid
         try {
             List<PointGps> points = db.getPointsGpsForVoyage(voyageId);
             if (points.isEmpty()) {
@@ -177,13 +177,13 @@ public class DetailVoyageActivity extends AppCompatActivity {
 
         Button btnToggleGps = findViewById(R.id.btn_toggle_gps);
         Button btnSavePosition = findViewById(R.id.btn_save_position);
-        SeekBar seekBar = findViewById(R.id.slider_periodicite);
+        SeekBar seekBar = findViewById(R.id.slider_periodicite); //Walid
         TextView labelPeriodicite = findViewById(R.id.label_periodicite);
 
         // Init état suivi
         btnToggleGps.setText(voyage.isSuiviActif() ? "Désactiver l’enregistrement GPS" : "Activer l’enregistrement GPS");
 
-        btnToggleGps.setOnClickListener(v -> {
+        btnToggleGps.setOnClickListener(v -> {//Walid
             boolean actif = !voyage.isSuiviActif();
             voyage.setSuiviActif(actif);
             db.updateSuiviEtPeriode(voyageId, actif, voyage.getPeriode());
@@ -274,10 +274,10 @@ public class DetailVoyageActivity extends AppCompatActivity {
 
 
         int currentPeriodeMin = voyage.getPeriode() / 60;
-        seekBar.setProgress(currentPeriodeMin);
+        seekBar.setProgress(currentPeriodeMin); //Walid
         labelPeriodicite.setText("Périodicité d’enregistrement : " + currentPeriodeMin + " min");
 
-        seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+        seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() { // walid
             @Override public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 int valueMin = Math.max(progress, 1);
                 labelPeriodicite.setText("Périodicité d’enregistrement : " + valueMin + " min");
@@ -297,7 +297,7 @@ public class DetailVoyageActivity extends AppCompatActivity {
 
         });
 
-        findViewById(R.id.btn_export_gpx).setOnClickListener(v -> {
+        findViewById(R.id.btn_export_gpx).setOnClickListener(v -> { //walid
             String[] formats = {"GPX", "KML"};
 
             new android.app.AlertDialog.Builder(this)

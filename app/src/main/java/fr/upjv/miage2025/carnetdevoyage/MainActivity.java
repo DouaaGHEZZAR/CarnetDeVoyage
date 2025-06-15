@@ -125,7 +125,7 @@ public class MainActivity extends AppCompatActivity {
         VoyageDatabaseHelper db = new VoyageDatabaseHelper(this);
         List<Voyage> voyages = db.getAllVoyages();
 
-        for (Voyage v : voyages) {
+        for (Voyage v : voyages) {//Walid
             try {
                 SimpleDateFormat sdf = new SimpleDateFormat("d/M/yyyy", Locale.getDefault());
                 Date dateDepart = sdf.parse(v.getDateDepart());

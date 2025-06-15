@@ -61,13 +61,13 @@ public class ListeVoyagesActivity extends AppCompatActivity {
                         voyages = dbHelper.getAllVoyages();
                         adapter.setVoyages(voyages);
 
-                        // 2. Supprimer de Firestore
+                        // 2. Supprimer de Firestore //Walid
                         FirebaseFirestore.getInstance()
                                 .collection("voyages")
                                 .document(String.valueOf(voyage.getId()))
                                 .delete();
 
-                        // 3. Supprimer les points GPS de Realtime Database
+                        // 3. Supprimer les points GPS de Realtime Database //Walid
                         FirebaseDatabase.getInstance()
                                 .getReference("points_gps")
                                 .child(String.valueOf(voyage.getId()))
